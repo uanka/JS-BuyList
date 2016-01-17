@@ -1,3 +1,63 @@
-h1 {
-    color: orange;
+body {
+    background-color: #d8aa7d;
+    font-family: "Times New Roman";
+}
+.both {
+    width: 70%;
+    margin: 150px;
+    align-content: center;
+}
+div div{
+    border-bottom: 1px solid black;
+}
+.board {
+    background-color: #feffe9;
+}
+.basket {
+    display: inline-block;
+    width: 60%;
+    float: left;
+    position: relative;
+}
+input {
+    width: 85%;
+    float: left;
+}
+#add {
+    background-color: #00b0b0;
+    color: white;
+    float: right;
+}
+.item {
+    background-color: #feffe9;
+    padding: 5px;
+    width: inherit;
+    height: 30px;
+}
+#edit {
+    display: none;
+    width: 30%;
+    display: inline;
+}
+.crement {
+    float: left;
+    position: relative;
+}
+done {
+    width: 33%;
+    float: right;
+    position: relative;
+
+}
+.close {
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+.list {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    float: right;
 }
