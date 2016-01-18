@@ -7,16 +7,16 @@
 </head>
 <body>
     <div id="both">
-        <div clsss="board basket">
+        <div class="board basket">
             <div id="input" class="item">
                 <input type="text" placeholder="Назва товару">
                 <button id="add">Додати</button>
             </div>
             <div class="item">
-                <span>Помідори</span>
-                <div class="edit" data-class="edit-mode">
+                <span class="name">Помідори</span>
+<!--                <div class="edit">
                     <input type="text" placeholder="Нова назва">
-                </div>
+                </div> -->
                 <span class="crement">
                     <button class="de">-</button>
                     <span class="amount">1</span>
@@ -27,14 +27,47 @@
                     <button class="close">x</button>
                 </span>
             </div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+                <span class="name">Печиво</span>
+                <span class="crement">
+                    <button class="de">-</button>
+                    <span class="amount">1</span>
+                    <button class="in">+</button>
+                </span>
+                <span class="done">
+                    <button class="buy">Куплено</button>
+                    <button class="close">x</button>
+                </span>
+            </div>
+            <div class="item">
+                <span class="name">Сир</span>
+                <span class="crement">
+                    <button class="de">-</button>
+                    <span class="amount">1</span>
+                    <button class="in">+</button>
+                </span>
+                <span class="done">
+                    <button class="buy">Куплено</button>
+                    <button class="close">x</button>
+                </span>
+            </div>
         </div>
         <div class="board list">
             <div><h2>Залишилося</h2></div>
-            <div></div>
-            <div><h2>Купили</h2></div>
-            <div></div>
+            <div>
+                <div class="li list_need">Печиво
+                    <span class="list_amount">1</span>
+                </div>
+                <div class="li list_need">Сир
+                    <span class="list_amount">1</span>
+                </div>
+            </div>
+            <div><h2>Куплено</h2></div>
+            <div>
+                <div class="li list_done">Помідори
+                    <span class="list_amount">1</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
