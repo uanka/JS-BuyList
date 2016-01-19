@@ -1,10 +1,13 @@
 body {
-    background-color: #d8aa7d;
-    font-family: "Times New Roman";
+    background-color: #b0fd7d;
+}
+* {
+    font-family: "Comic Sans MS", "Times New Roman", serif;
+    color: #043b2c;
 }
 #both {
     width: 80%;
-    margin: 15% auto auto;
+    margin: 10% auto auto;
 }
 body div div div{
     border-bottom: 1px solid lightgrey;
@@ -12,65 +15,98 @@ body div div div{
 }
 .board {
     background-color: #feffe9;
+    box-shadow: grey;
+
 }
 .basket {
-    width: 60%;
+    width: 67%;
     float: left;
     display: inline-block;
-    margin-right: 50px;
     position: relative;
+    border-radius: 1%;
+    box-shadow: grey;
+
 }
 input {
     width: 85%;
     float: left;
-    height: 80%;
+    height: 90%;
     border: 1px solid lightgrey;
 }
 #add {
     background-color: #00b0b0;
     color: white;
     float: right;
-    height: 80%;
+    height: 100%;
+    width: 14%;
+    text-align: center;
+    border: 1px solid #009999;
+}
+#add:hover {
+    background-color: #009999;
 }
 .item {
     background-color: #feffe9;
-    padding: 5px;
+    padding: 15px 15px 10px 15px;
 }
 .name {
-    width: 33%;
+    width: 43%;
     text-align: left;
     float: left;
 }
-#edit {
-    display: none;
-    width: 30%;
-    overflow-x: hidden;
+input.name {
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 .crement {
-    width: 33%;
+    width: 23%;
     float: left;
     position: relative;
     font-weight: bold;
 }
-.de {
-    color: white;
-    background-color: red;
+.but {
     border-radius: 100%;
     font-weight: bold;
+    color: white;
+    width: 23px;
+    height: 23px;
 
+}
+.de {
+    background-color: red;
+    border: 1px solid #ae281f;
+
+}
+.dis {
+     background-color: #ff7c6e;
+ }
+.de:hover {
+    background-color: #e40000;
+}
+.dis:hover {
+    background-color: #ff7c6e;
+}
+.de:disabled {
+    background-color: #ff7c6e;
 }
 .amount {
-    background-color: lightgrey;
-    width: 40px;
+    display: inline-block;
+    background-color: rgba(176, 253, 125, 0.7);
+    width: 23px;
     font-weight: bold;
-
+    text-align: center;
+    border-radius: 2%;
+    padding: 2px;
 }
 .in {
-    color: white;
     background-color: limegreen;
-    border-radius: 100%;
-    font-weight: bold;
+    border: 1px solid #18ab29;
 
+}
+.in:hover {
+    background-color: rgba(50, 183, 50, 0.99);
 }
 .done {
     width: 33%;
@@ -78,34 +114,60 @@ input {
     position: relative;
 
 }
+.buy {
+    height: 80%;
+    float: right;
+}
 .close {
     background-color: red;
     color: white;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
+    float: right;
+    padding: 2px 2px 5px;
+    border: 1px solid #ba261e;
+    border-radius: 2px;
+}
+.close:hover {
+    background-color: #e40000;
+}
+.bought .name {
+    text-decoration: line-through;
+}
+.bought .amount {
+    margin-left: 30px;
 }
 .list {
     display: inline-block;
     position: relative;
-    width: 35%;
+    width: 25%;
     float: right;
     text-align: left;
+    border-radius: 1%;
 }
-.li {
-    background-color: lightblue;
+.list div {
+    padding: 10px;
+/*    height: 30px; */
+}
+.list div .li {
+    background-color: #b0fd7d;
     text-align: left;
     display: inline-block;
-    height: 80%;
-    border-radius: 5%;
-    margin: auto;
+    height: 50%;
+    border-radius: 10%;
+    margin: 2px 2px 2px 2px;
+    padding: 5px 5px 10px 5px;
 }
 .list_amount {
     background-color: orangered;
     color: white;
-    font-weight: bold;
     float: right;
     width: 20px;
     height: 20px;
     border-radius: 100%;
     text-align:center;
+    text-decoration: none;
+}
+.list_done {
+    text-decoration: line-through;
 }
