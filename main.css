@@ -122,6 +122,11 @@ input.name {
     height: 80%;
     float: right;
 }
+.n_buy {
+    height: 80%;
+    float: right;
+    display: none;
+}
 .close {
     background-color: red;
     color: white;
@@ -138,6 +143,9 @@ input.name {
 .name_crossed {
     text-decoration: line-through;
     display: none;
+    width: 43%;
+    text-align: left;
+    float: left;
 }
 .bought .but {
     display: none;
@@ -177,6 +185,7 @@ input.name {
     border-radius: 100%;
     text-align:center;
     text-decoration: none;
+    margin-top: 3px;
 }
 .list_done {
     text-decoration: line-through;
