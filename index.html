@@ -8,24 +8,31 @@
 <body>
     <div id="both">
         <div class="board basket">
-            <div id="input" class="item">
+            <div id="input">
                 <input type="text" placeholder="Назва товару">
                 <button id="add">Додати</button>
             </div>
-            <div class="item bought">
-                <span class="name">Помідори</span>
+            <div class="item">
+                <span>
+                <input type="text" placeholder="Нова назва" value="Помідори" class="name">
+                <span class="name_crossed">Помідори</span>
+                </span>
                 <span class="crement">
-                    <span class="amount">2</span>
+                    <button class="but de dis">-</button>
+                    <span class="amount">1</span>
+                    <button class="but in">+</button>
                 </span>
                 <span class="done">
-                    <button class="buy">Не куплено</button>
+                    <button class="close">x</button>
+                    <button class="buy">Куплено</button>
                 </span>
             </div>
             <div class="item">
                 <input type="text" placeholder="Нова назва" value="Печиво" class="name">
+                <span class="name_crossed">Печиво</span>
                 <span class="crement">
-                    <button class="but de">-</button>
-                    <span class="amount">2</span>
+                    <button class="but de dis">-</button>
+                    <span class="amount">1</span>
                     <button class="but in">+</button>
                 </span>
                 <span class="done">
@@ -35,6 +42,7 @@
             </div>
             <div class="item">
                 <input  type="text" placeholder="Нова назва" value="Сир" class="name" >
+                <span class="name_crossed">Сир</span>
                 <span class="crement">
                     <button class="but de dis">-</button>
                     <span class="amount">1</span>
@@ -47,20 +55,20 @@
             </div>
         </div>
         <div class="board list">
-            <div><h3>Залишилося</h3></div>
-            <div>
+            <div class="item">Залишилося</div>
+            <div class="shelf">
                 <div class="li list_need">Печиво
-                    <span class="list_amount">2</span>
+                    <span class="list_amount">1</span>
                 </div>
                 <div class="li list_need">Сир
                     <span class="list_amount">1</span>
                 </div>
-            </div>
-            <div><h3>Куплено</h3></div>
-            <div>
-                <div class="li list_done">Помідори
-                    <span class="list_amount">2</span>
+                <div class="li list_need">Помідори
+                    <span class="list_amount">1</span>
                 </div>
+            </div>
+            <div class="item">Куплено</div>
+            <div class="shelf">
             </div>
         </div>
     </div>
