@@ -23,6 +23,8 @@ body {
     border-radius: 1%;
     box-shadow: grey;
     margin-right: 5%;
+    margin-bottom: 5%;
+    min-width: 500px;
 }
 #input{
     background-color: #feffe9;
@@ -30,7 +32,7 @@ body {
     border-bottom: 1px solid lightgrey;
     height: 30px;
 }
-input {
+#input input {
     width: 85%;
     float: left;
     height: 90%;
@@ -58,12 +60,18 @@ input {
     width: 43%;
     text-align: left;
     float: left;
-}
-input.name {
     border: none;
     background-color: inherit;
     font-family: inherit;
     font-size: inherit;
+}
+.name_crossed {
+    text-decoration: line-through;
+    margin-top: 2px;
+    display: none;
+    width: 43%;
+    text-align: left;
+    float: left;
 }
 .crement {
     width: 23%;
@@ -77,21 +85,13 @@ input.name {
     color: white;
     width: 23px;
     height: 23px;
-
 }
 .de {
     background-color: red;
     border: 1px solid #ae281f;
-
 }
-.dis {
-     background-color: #ff7c6e;
- }
 .de:hover {
     background-color: #e40000;
-}
-.dis:hover {
-    background-color: #ff7c6e;
 }
 .de:disabled {
     background-color: #ff7c6e;
@@ -105,10 +105,12 @@ input.name {
     border-radius: 2%;
     padding: 2px;
 }
+.bought .amount {
+    margin-left: 30px;
+}
 .in {
     background-color: limegreen;
     border: 1px solid #18ab29;
-
 }
 .in:hover {
     background-color: rgba(50, 183, 50, 0.99);
@@ -117,7 +119,6 @@ input.name {
     width: 33%;
     float: right;
     position: relative;
-
 }
 .buy {
     height: 80%;
@@ -141,28 +142,13 @@ input.name {
 .close:hover {
     background-color: #e40000;
 }
-.name_crossed {
-    text-decoration: line-through;
-    display: none;
-    width: 43%;
-    text-align: left;
-    float: left;
-}
-.bought .but {
-    display: none;
-}
-.bought .name{
-    display: none;
-}
-.bought .amount {
-    margin-left: 30px;
-}
 .list {
     display: inline-block;
     position: relative;
     width: 25%;
     float: left;
     text-align: left;
+    min-width: 220px;
 }
 .list div {
     padding: 10px;
