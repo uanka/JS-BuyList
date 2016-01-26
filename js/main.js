@@ -24,7 +24,7 @@ $(function(){
         item.find(".in").click(function(){increment(item);});
         item.find(".buy").click(function(){bought(item);});
         item.find(".n_buy").click(function(){notBought(item);});
-        item.find(".close").click(function(){item.remove();});
+        item.find(".close").click(function(){deleteItem(item);});
     });
 
 
@@ -49,6 +49,7 @@ $(function(){
 
         $(".list_need").each(function(i, item) {
             var name = $(item).find(".liname").text();
+            console.log(name);
             if(name == node.find(".name_crossed").text()){
                 var temp = '<div class="li list_done">'+$(item).html()+'</div>';
                 $(item).remove();
@@ -82,10 +83,7 @@ $(function(){
         var old = parseInt($(node).find('.amount').text());
         if(old>1) old--;
         if(old==1){
-           // $(this).prop("disabled", true);
-            node.find(".de").addClass("dis");
-
-           // $(this).;
+            node.find(".de").attr("disabled", true);
         }
         node.find(".amount").text(old);
         $(".list_need").find(".liname").each(function(i, item) {
@@ -98,11 +96,7 @@ $(function(){
     function increment(node){
         var old = parseInt($(node).find(".amount").text());
         if(old==1){
-           // $(this).parent().find(".de").prop("disabled", false);
-            //$(this).parent().find(".de").removeAttr("disabled");
-            node.find(".de").removeClass("dis");
-           // $(this).parent().removeAttr("disabled");
-
+            node.find(".de").removeAttr("disabled");
         }
         old++;
         node.find(".amount").text(old);
@@ -113,27 +107,34 @@ $(function(){
             }
         });
     }
+    function deleteItem(node){
+        node.remove();
+        var name = node.find(".name_crossed").text();
+        $(".liname").each(function(i, item) {
+            var title = $(item).text();
+            if (name == title) {
+                $(item).parent().remove();
+            }
+        });
+    }
     function addItem(title) {
         var node = $(ITEM_TEMPLATE); //Create new HTML node
         node.addClass("item");
         node.find(".name").val(title); //Set product title
         node.find(".name_crossed").text(title);
         node.find(".amount").text(1);
+//Changing amount
+        node.find(".de").click(function(){decrement(node);});
+        node.find(".in").click(function(){increment(node);});
         node.find(".buy").text("Куплено");
-//Bougght Action
-        node.find(".buy").click(function(){
-            bought(node);
-        });
-        node.find(".n_buy").click(function(){
-            notBought(node);
-        });
+//Bought Action
+        node.find(".buy").click(function(){bought(node); });
+        node.find(".n_buy").click(function(){ notBought(node); });
 //Delete Action
-        node.find(".close").click(function(){
-            node.remove();
-        });
+        node.find(".close").click(function(){deleteItem(node);});
         var linode = $(LIST_TEMPLATE);
-        linode.text(title);
-        linode.append(AMOUNT_CIRCLE);
+        console.log(LIST_TEMPLATE);
+        linode.find(".liname").text(title);
         BASKET.append(node); //Add to the end of the list
         LIST.append(linode);
     }
