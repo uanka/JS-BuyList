@@ -12,14 +12,16 @@ $(function(){
     $("#input").find("input").focus();
 
     $("#add").click(function(){newItem();})
+  /*
     $("#input").find(":input").keyup(function(e){
         if(e.keyCode == 13) {
             //newItem(); //work
-            $("#add").click();
+            //$("#add").click();//work
+
             return false;
         }
     });
-
+*/
     $(".item").each(function(i, item) {
         item = $(item); //to have access to all jQuery functions
         item.find(".de").click(function(){decrement(item);});
@@ -167,6 +169,8 @@ $(function(){
         linode.find(".liname").text(title);
         BASKET.append(node); //Add to the end of the list
         LIST.append(linode);
+        $("#input").find(":input").focus();
+
     }
 
 
